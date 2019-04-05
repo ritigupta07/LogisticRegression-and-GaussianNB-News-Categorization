@@ -1,0 +1,36 @@
+ In this part of the assignment you are going to use the newsgroups dataset.
+
+from sklearn.datasets import fetch_20newsgroups
+
+You are interested in 4 categories of this dataset. The are
+
+categories = ['rec.autos', 'rec.motorcycles','rec.sport.baseball',
+'rec.sport.hockey',]
+
+You must classify the newsgroups into these 4 categories.
+
+You can use the following code to get data 
+
+ fetch_20newsgroups(subset='all',remove=('headers', 'footers', 'quotes'), categories=categories,shuffle=True, random_state=42)
+
+Pleae note that you will not be using the headers, footers and quotes as features to make this prediction. 
+
+You can split your data into training and testing or you can apply k-fold cross-validation with K=5. 
+
+For classification you must use multinomial Naive Bayes and Logisitic Regression. 
+
+Provide a report of your testing accuracy or CV accuracy. You will need to write code to do the following:
+
+(a) Data visualization to understand the data
+
+(b) Data preprocessing to clean your data
+
+(c) Feature extraction 
+
+(d) Building your models
+
+(e) analyzing its performance
+
+ You can use pre-built libraries like sklearn.feature_extraction.text import CountVectorizer or TFIDF.  You can also look into removing stop words and other words that do not make sense in predicting these classes. If you are doing so you can use the NLTK toolkit. 
+
+Please provide a description of the preprocessing steps you did and why you did them.
